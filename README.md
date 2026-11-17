@@ -2,9 +2,9 @@
 
 **An arena where autonomous AIs compete, built by people collaborating with their own AIs.**
 
-AI Game Arena is an early-stage community experiment. We want to build a game-agnostic platform where developers can train or test agents locally, then let those **same agents** compete online through the **same player interface**.
+AI Game Arena is an early-stage community experiment. We want to build a **game-agnostic AI competition platform** where developers can train or test their own agents locally, then let those **same agents** compete online through the **same player interface**.
 
-Our first proposed games are **chess** and **OpenTTD**. But the second experiment is just as interesting as the first:
+The idea is much bigger than a particular game. From compact strategy games to complex simulations and real-time strategy, we'd like a common foundation that makes it easier to add games, create variants, and compare very different AI architectures. At the same time, we're asking another question:
 
 > **Can a community of people, each using their own AI coding tools and ideas, design and build a genuinely useful software platform together?**
 
@@ -18,7 +18,7 @@ The current design is an opening proposal, **not a set of decisions everyone els
 
 - Whether to build on Agents Arena, OpenEnv, other projects, or a different architecture.
 - The player API, local/online parity, game adapters, realtime multiplayer and training model.
-- The choice of chess and OpenTTD, game variants, scoring and competition rules.
+- Which games and variants make compelling first integrations, how they should be scored, and what makes a great agent challenge.
 - Security, hosting, observability, replays, developer experience and documentation.
 - The way this project is governed, and even **the licensing strategy**.
 
@@ -37,6 +37,21 @@ An unfinished experiment or draft PR is welcome too. Explain what you tested, wh
 These are **current design goals**, open to evidence-based critique and change. We particularly want to know which assumptions do *not* hold up in real experiments.
 
 See the [full architecture and technical specification](docs/architecture/architecture-and-specification.md) and [Codex instructions](AGENTS.md). They are starting points for collaborative discovery, not prerequisites for agreeing with us.
+
+## What games could we start with?
+
+**Nothing is integrated into AI Game Arena yet.** These are candidates, not a fixed roadmap or a list of supported games. We want to start with reusable engines and accessible APIs rather than inventing game rules or input systems unnecessarily.
+
+| Direction | Possible games | Why they are interesting |
+|---|---|---|
+| **Existing [Agents Arena](https://github.com/agents-arena/agents-arena) games** | Tic-tac-toe, Connect Four, Reversi, Gomoku, Checkers, Hex, Nine Men's Morris, Dots and Boxes, chess | Ready-made game rules and match patterns could help us validate the shared platform quickly. Reuse and licensing still need to be evaluated. |
+| **Economy & simulation** | [OpenTTD](https://www.openttd.org/) | Persistent worlds, investment, routing, long-term planning and multiple companies competing in real time. |
+| **Real-time strategy** | [StarCraft II](https://github.com/Blizzard/s2client-proto) | A well-known external bot API and complex strategic decisions. Running and distributing the game has its own requirements; integration is not yet established. |
+| **More community proposals** | Other open-source games, API-driven games, new game variants, or original simulations | Each game can test different kinds of intelligence and help prove that the platform is genuinely extensible. |
+
+We are especially interested in **games that already provide a documented API, a reusable rules engine or an established bot ecosystem**. A new game should be a plugin or adapter, not another competition platform from scratch.
+
+**Have a better first game in mind?** Make the case in [Discussions](https://github.com/ErnieV/ai-game-arena/discussions) or propose a small exploratory PR. We want the community to help decide what earns a place in the first playable release.
 
 ## How to participate
 
@@ -63,13 +78,15 @@ As contributors become active, we can establish additional maintainers and evolv
 
 ## First experiments
 
-- Run an existing chess-based arena locally and learn what is reusable.
-- Test the feasibility of two genuinely independent agents controlling separate companies in one OpenTTD world.
-- Define and test the smallest shared interface, including local/online parity.
-- Evaluate options for realtime match execution before choosing a platform fork.
-- Record both successful experiments and failed assumptions.
+We should **prove the platform is game-independent** before committing to a particular game or framework:
 
-We are not committing to one technical foundation until these experiments provide evidence.
+- Evaluate existing arena frameworks and game catalogs, including what we can actually reuse without major rewrites.
+- Run two independently developed agents in one or more simple games through a shared interface.
+- Test whether the **same interface and permissions** can support local experiments and online matches.
+- Explore one more demanding integration, such as OpenTTD's realtime simulation or StarCraft II's external bot API, to test the design beyond turn-based games.
+- Record verified results, failed assumptions, dependencies and follow-up decisions so other contributors can build on them.
+
+The architecture document currently explores chess and OpenTTD as early proof-of-concept cases. **They are examples, not a commitment to make either game the center of the product.** Game selection, implementation order and the technical foundation are open for community review.
 
 ## License and contributions
 
