@@ -4,7 +4,9 @@
 
 Read `docs/architecture/architecture-and-specification.md` fully before proposing architecture or implementation. It is an RFC, not a set of pre-validated technical claims. Track unverified assumptions and decisions explicitly.
 
-## Non-negotiable requirements
+## Current architectural goals (challengeable by PR/RFC)
+
+These goals guide the initial technical spikes. They are **not immutable instructions or settled architecture**. Evaluate alternative proposals on their evidence and tradeoffs, and allow contributors to revise the specification via issues and PRs. Until a change is accepted, use these as the current test baseline.
 
 - One game-facing player protocol for **both** local testing/training and online competition. The same agent implementation must work in both by changing connection configuration only.
 - Identical action semantics, observation permissions, error behavior, game variant rules, time semantics and validation for a given protocol/game version. Privileged training administration is NOT exposed to agents.
@@ -34,3 +36,12 @@ Before writing significant application code, report what was actually verified, 
 - Never relicense third-party code. Preserve upstream notices and check compatibility for all copied/combined components.
 - Do not accept significant third-party code for dual-commercial licensing without an explicit contribution rights agreement.
 - Do not copy from Joost’s repository until actual license/permission is verified.
+
+## Open collaboration with human and AI contributors
+
+- The repository is a collaborative experiment: contributors can use their own AI tools, or none, to propose and review designs and code.
+- Treat the architecture specification as an RFC rather than an unquestionable authority. Document competing approaches and technical findings.
+- Code PRs, documentation PRs and experimental draft PRs are all welcome. Do not exclude contributions merely because they challenge the existing plan.
+- The human submitting AI-assisted work remains responsible for testing, attribution, licenses and safety.
+- Follow `CONTRIBUTING.md` and `GOVERNANCE.md`; major changes are discussed publicly and consequential decisions are recorded.
+- Commercial relicensing of external code requires explicit rights; code can be reviewed before those rights are resolved, but don't merge substantial contributions until the licensing gate is cleared.
