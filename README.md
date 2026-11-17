@@ -55,6 +55,18 @@ No permission is needed to **propose** a PR. For substantial changes, an issue f
 
 If this is your first open collaborative project, start with [CONTRIBUTING.md](CONTRIBUTING.md), which explains forks, branches, PRs, AI-assisted contributions and the review process.
 
+## Working together with independent AIs
+
+We are exploring a GitHub Project board with small, dependency-linked tasks. **Multiple people can work on different unblocked issues at once**, each in their own branch or worktree. We want more than code: every completed issue should leave a concise handoff of tested findings, architectural decisions, documentation changes and newly discovered dependencies.
+
+Matt Pocock's [engineering skills](https://github.com/mattpocock/skills) are an **optional recommended toolkit**, not a mandatory development process. The proposed onboarding explains how to install them for different agents and how to avoid accidentally turning a local *one-ticket-per-session* guideline into a global one-ticket-only restriction.
+
+- [Contributor environment setup](docs/development/getting-started.md)
+- [Proposed collaboration workflow and board statuses](docs/development/collaboration-workflow.md)
+- [Project-owned AI collaboration skill](.agents/skills/arena-collaboration/SKILL.md)
+
+These process documents are proposed for community review and can be improved by PRs.
+
 ## How decisions are made
 
 We want **open discussion, visible reasoning and decisions that can be revisited**. We aim for rough consensus rather than counting votes on every detail. In this early phase the repository owner is the initial maintainer and has final merge responsibility, including licensing, legal and security decisions. That is not the same as claiming the initial proposal is always right.
