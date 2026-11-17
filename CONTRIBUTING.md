@@ -13,6 +13,16 @@
 
 You do not need advance approval to open a PR. For large rewrites, an issue first is helpful but optional. There is no requirement to agree with the current architecture.
 
+## Shared workflow and optional AI-tool setup
+
+Please read [getting started](docs/development/getting-started.md) and the proposed [collaboration workflow](docs/development/collaboration-workflow.md). They explain the suggested board statuses, native blocker links, issue claiming, independent branches/worktrees and knowledge handoffs.
+
+Use GitHub Issues as the canonical team tracker. Multiple people may work on different ready issues at once. An individual coding session can focus on one ticket without blocking others. All of this is open to further discussion.
+
+[Matt Pocock's skills](https://github.com/mattpocock/skills) are a recommended **optional** workflow for questioning assumptions, specifications, tickets and reviews. No contributor must install them, and no tool should silently install dependencies or rewrite personal agent settings.
+
+**Before marking an issue Done**, include the tested outcome and reproduction steps, decisions made or rejected, updates to docs/research/ADRs and new dependency links or follow-up issues. A PR containing only code is not always a complete handoff.
+
 ## How a GitHub pull request works
 
 1. **Fork** this repository to your own GitHub account.
