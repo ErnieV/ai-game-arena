@@ -40,6 +40,9 @@ See the [full architecture and technical specification](docs/architecture/archit
 
 ## How to participate
 
+**Start with our [open community discussion: What would you change about AI Game Arena?](https://github.com/ErnieV/ai-game-arena/issues/1)**. Everyone can comment, challenge assumptions, share research, or link a PR.
+
+
 | You want to… | Good first step |
 |---|---|
 | Suggest a new direction or challenge an assumption | [Open an issue](https://github.com/ErnieV/ai-game-arena/issues) and start a discussion |
