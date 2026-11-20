@@ -29,6 +29,18 @@ Was AI used to prepare the contribution? How? Which outputs did you personally v
 - [ ] I have read [CONTRIBUTING.md](../CONTRIBUTING.md), including the current licensing limitations.
 - [ ] I understand that a code PR can be reviewed before any necessary contributor rights agreement is completed, and that a merge is not guaranteed.
 
+## Shared knowledge and dependency handoff
+
+- **Linked issue / dependent issues:**
+- **Outcome (what is implemented, learned, or ruled out):**
+- **Verified evidence (commands, environment, results):**
+- **Decisions and alternatives (ADR link when significant):**
+- **Documentation/research updates:**
+- **New blockers / follow-up issues / newly unblocked tasks:**
+- **Integration considerations for another contributor:**
+
+A short, explicit handoff helps people with completely different AI agents continue the work without access to private chat histories. For experimental or draft PRs, mark unknowns rather than inventing results.
+
 ## What feedback would help?
 
 Questions, uncertainties and areas where you want a second opinion.

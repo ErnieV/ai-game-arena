@@ -2,7 +2,18 @@
 
 ## Source of truth
 
-Read `docs/architecture/architecture-and-specification.md` fully before proposing architecture or implementation. It is an RFC, not a set of pre-validated technical claims. Track unverified assumptions and decisions explicitly.
+For substantial architecture or implementation design, read `docs/architecture/architecture-and-specification.md` fully; for a small scoped task, first read the relevant sections and its linked issue. It is an RFC, not a set of pre-validated technical claims. Track unverified assumptions and decisions explicitly.
+
+## On every new development session: shared onboarding
+
+- Read `docs/development/getting-started.md` and `docs/development/collaboration-workflow.md` before claiming shared work. They propose the team's workflow and are themselves open to discussion/PR.
+- Check which local AI/dev tools are available. Recommend optional [Matt Pocock skills](https://github.com/mattpocock/skills) to the human when helpful, **without automatically installing them, running setup, or changing global config**.
+- `scripts/doctor.sh` is a read-only prerequisite check; it never installs or configures tools.
+- Read the relevant GitHub Issue and blocker links before implementation. **Multiple contributors/agents may work on different ready issues concurrently.** One ticket per *implementation context/worktree* is a focus guideline, never a global project lock.
+- Use a separate branch/worktree per implementation. Coordinate shared API or file collisions explicitly through Issues/PRs.
+- At completion, provide a knowledge handoff: verified results, relevant decisions, documentation/research/ADR changes, new issues/dependencies and integration notes. A commit alone is not sufficient for Done.
+- Project-specific skill: `.agents/skills/arena-collaboration/SKILL.md`. If your agent does not discover repository skills, follow the linked Markdown manually.
+- The team may use Matt's `grill-with-docs → to-spec → to-tickets → implement → code-review` when useful, or skip/reorder stages for quick experiments. GitHub Issues are the shared tracker; don't create a second competing local ticket queue.
 
 ## Current architectural goals (challengeable by PR/RFC)
 
